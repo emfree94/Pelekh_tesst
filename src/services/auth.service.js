@@ -4,7 +4,7 @@ export const AuthServices = {
   async login(values) {
     try {
       const { data } = await axiosInstance.post('/login', values)
-      console.log('dasdsa', data)
+      console.log('data', data)
       return data
     } catch (error) {
       console.error('Login failed:', error.response.data)
