@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://db.onlinewebfonts.com/c/3ddd0e3d1a076e112b27d8d9b7e20200?family=Basis+Grotesque+Pro);
+
+:root {
+  --border-color: #d3d8dc;
+}
+
+body {
+  font-family: 'Basis Grotesque Pro', sans-serif;
+}
