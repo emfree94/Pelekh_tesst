@@ -1,5 +1,9 @@
+import moment from "moment"
+import { AuthServices } from "../services/auth.service"
+import { jwtDecode } from "jwt-decode"
+
 export const expireToken = async (token) => {
-  const decodeToken = jwt_decode(token)
+  const decodeToken = jwtDecode(token)
   try {
     if (
       moment().isSameOrAfter(
@@ -9,7 +13,7 @@ export const expireToken = async (token) => {
       const form = {
         refresh_token: localStorage.getItem('refresh_token'),
       }
-      await AuthService.refreshToken(form)
+      await AuthServices.refreshToken(form)
     }
   } catch (e) {
     console.log(e)
